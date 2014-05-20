@@ -56,7 +56,7 @@ if (app.get('env') === 'production') {
 
 // Register routes
 var router = express.Router();   
-var allRoutes = require("./routes/index");
+var allRoutes = require("./server/routes/index");
 allRoutes.init(router);
 
 // All routes will be prefixed with /api
