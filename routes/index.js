@@ -5,8 +5,10 @@
     controllers.init = function (router) {
         router.get("/", function(req, res) {
             var environment = process.env.NODE_ENV || 'development';
+            var connectionString = process.env.myConnectionString || "localConnectionString";
             res.json({
-                environment: environment
+                environment: environment,
+                connectionString: connectionString
             });
         });
 
