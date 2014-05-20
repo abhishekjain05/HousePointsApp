@@ -8,13 +8,9 @@ var router = express.Router();
 var environment = process.env.NODE_ENV || 'development';
 
 // Register routes
-// TODO - refactor and put them in individual files based on feature
-router.get("/", function(req, res) {
-    res.json({
-        envFromExpress: app.get('env'),
-        envFromNode: environment
-    });
-});
+var allRoutes = require("./routes/index");
+allRoutes.init(router);
 
-app.use('/', router);
+// All routes will be prefixed with /api
+app.use('/api', router);
 module.exports = app;
