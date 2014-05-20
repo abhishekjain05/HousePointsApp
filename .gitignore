@@ -51,3 +51,4 @@ build/Release
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
 >>>>>>> 45bc12ecd395c18953abe14411e312c5cfc532da
+data/dbConfig.js
