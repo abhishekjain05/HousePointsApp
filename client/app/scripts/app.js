@@ -1,23 +1,24 @@
 'use strict';
 
 angular
-  .module('clientApp', [
-    'ngCookies',
-    'ngResource',
-    'ngSanitize',
-    'ngRoute'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/home', {
+  .module('clientApp', ['ui.router'])
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider
+      .state('home', {
+        url: '/',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/', {
+      .state('notes', {
+        url: '/notes',
         templateUrl: 'views/notes.html',
         controller: 'NotesCtrl'
       })
-      .otherwise({
-        redirectTo: '/'
-      });
+      .state('notes.category', {
+        url: '/:category',
+        templateUrl: 'views/category.html',
+        controller: 'NotesCategoryController'
+      })      
   });
