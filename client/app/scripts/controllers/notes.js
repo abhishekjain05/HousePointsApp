@@ -12,7 +12,7 @@ angular.module('clientApp')
         NotesService.getNotes()
             .then(function(result) {
                 $scope.data.categories = result.categories;
-                console.log($scope.data.notes);
+                console.log($scope.data.categories);
             }, function(error) {
                 console.log(error);
             });
