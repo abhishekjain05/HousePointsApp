@@ -1,7 +1,131 @@
 html {
+  font-family: 'Open Sans';
   font-size: 10px;
+}
+
+.clear:before,
+.clear:after,
+.nav:before,
+.nav:after,
+nav:before,
+nav:after {
+  display: table;
+  content: "";
+}
+
+.clear:after {
+  clear: both;
+}
+
+.clear {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+
 }
 
 body {
   font-size: 1.7rem;
+  line-height: 1.4;
 }
+
+.container {
+  /* padding: 0 20px; */
+
+}
+
+.header {
+  background: #eee;
+}
+
+.header .header-container {
+  padding: 5px 0;
+}
+
+.header .nav-header .text-muted {
+  float: left;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2.8rem;
+}
+
+.header .nav-header .menu-toggle {
+  float: right;
+}
+
+.header nav {
+  display: none;
+  float: left;
+}
+
+.header nav li {
+  display: block;
+  line-height: 2.8rem;
+}
+
+.header nav li a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .header .header-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .header .nav-header {
+    float: left;
+  }
+  .header .nav-header .menu-toggle {
+    display: none;
+  }
+  .header nav {
+    display: block!important;
+    /* padding: 3px; */
+  
+    margin-left: 30px;
+  }
+  .header nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .uiview,
+  .footer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* .header1 {
+  h3 {
+    font-weight: normal;
+    font-size: 2rem;
+  }
+  ul {
+    float: none;
+    li {
+      display: block;
+    }
+  } 
+
+  .menu-toggle {
+    float: right;
+  }
+  .text-muted {
+    float: left;    
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+    ul {
+      float: left;
+      li {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+ 
+}*/

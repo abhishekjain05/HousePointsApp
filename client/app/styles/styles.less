@@ -1,8 +1,126 @@
+@mainPageWidth: 90%;
+
 html {
 	font-size: 10px;
+  font-family: 'Open Sans'
+}
+
+.clear:before, .clear:after, 
+.nav:before, .nav:after,
+nav:before, nav:after{
+    content:"";
+    display:table;
+}
+.clear:after {
+    clear:both;
+}
+.clear {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 body
 { 
 	font-size: 1.7rem;
+  line-height: 1.4;
 }
+
+.container {
+  /* padding: 0 20px; */
+}
+
+
+.header {
+  background: #eee;
+  .header-container {
+    padding: 5px 0;
+  }
+  .nav-header {
+    .text-muted {
+      float: left;
+      font-weight: normal; 
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+    .menu-toggle {
+      float: right;
+    }    
+  }
+
+  nav {
+    float: left;
+    display: none;
+
+    li {
+      display: block;
+      line-height: 2.8rem;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .header-container {
+      width: @mainPageWidth;
+      margin: 0 auto;
+    }
+
+    .nav-header {
+      float: left;
+      .menu-toggle {
+        display: none;
+      }  
+    }
+    nav {
+        display: block!important;
+        /* padding: 3px; */
+        margin-left: 30px;
+        li {
+          display: inline-block;
+          margin-right: 10px;
+        }
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+    .uiview, .footer {
+      width: @mainPageWidth;
+      margin: 0 auto;
+    }
+}
+
+/* .header1 {
+  h3 {
+    font-weight: normal;
+    font-size: 2rem;
+  }
+  ul {
+    float: none;
+    li {
+      display: block;
+    }
+  } 
+
+  .menu-toggle {
+    float: right;
+  }
+  .text-muted {
+    float: left;    
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+    ul {
+      float: left;
+      li {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+ 
+}*/
