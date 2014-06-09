@@ -26,6 +26,7 @@ nav:after {
 body {
   font-size: 1.7rem;
   line-height: 1.4;
+  background: #b2e1e6;
 }
 
 .container {
@@ -34,7 +35,8 @@ body {
 }
 
 .header {
-  background: #eee;
+  color: #000000;
+  background: #32909a;
 }
 
 .header .header-container {
@@ -63,6 +65,7 @@ body {
 }
 
 .header nav li a {
+  color: #000000;
   text-decoration: none;
 }
 

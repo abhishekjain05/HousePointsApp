@@ -1,4 +1,7 @@
 @mainPageWidth: 90%;
+@mainBodyBackground: #B2E1E6;
+@headerBackground: darken(@mainBodyBackground, 40%);
+@headerColor: contrast(@headerBackground);
 
 html {
 	font-size: 10px;
@@ -22,6 +25,7 @@ body
 { 
 	font-size: 1.7rem;
   line-height: 1.4;
+  background: @mainBodyBackground
 }
 
 .container {
@@ -30,7 +34,9 @@ body
 
 
 .header {
-  background: #eee;
+  background: @headerBackground;
+  color: @headerColor;
+
   .header-container {
     padding: 5px 0;
   }
@@ -56,6 +62,7 @@ body
 
       a {
         text-decoration: none;
+        color: @headerColor;
       }
     }
   }
