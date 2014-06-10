@@ -35,7 +35,7 @@ body {
 }
 
 .header {
-  color: #000000;
+  color: #ffffff;
   background: #0099cc;
 }
 
@@ -62,11 +62,16 @@ body {
 .header nav li {
   display: block;
   line-height: 2.8rem;
+  box-sizing: content-box;
 }
 
 .header nav li a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
+}
+
+.header nav li a.active {
+  border-bottom: 4px solid #004d66;
 }
 
 @media (min-width: 768px) {
@@ -99,36 +104,3 @@ body {
     margin: 0 auto;
   }
 }
-
-/* .header1 {
-  h3 {
-    font-weight: normal;
-    font-size: 2rem;
-  }
-  ul {
-    float: none;
-    li {
-      display: block;
-    }
-  } 
-
-  .menu-toggle {
-    float: right;
-  }
-  .text-muted {
-    float: left;    
-  }
-
-  @media (min-width: 768px) {
-    display: block;
-    ul {
-      float: left;
-      li {
-        a {
-          text-decoration: none;
-        }
-      }
-    }
-  }
- 
-}*/
