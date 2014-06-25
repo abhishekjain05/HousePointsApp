@@ -13,6 +13,10 @@ angular
         // redirect to error page
         $location.path('/error');
       }*/
+      $rootScope.currentStateName = to.name;
+      $rootScope.stateIncludes = function(matcher) {
+          return to.name.indexOf(matcher) != -1;
+      };
       console.log(to);
     });
      
@@ -40,7 +44,7 @@ angular
         url: 'login',
         templateUrl: 'views/login.html'
       })      
-      .state('home.category', {
+      .state('home.notes.category', {
         url: 'notes/:category',
         templateUrl: 'views/category.html',
         controller: 'NotesCategoryController'

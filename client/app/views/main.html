@@ -9,7 +9,7 @@
             </div>
             <nav class="clear">  
                 <ul class="nav">
-                    <li><a ui-sref="home.notes" ui-sref-active="active">Notes</a></li>
+                    <li><a ui-sref="home.notes" ng-class="{active: stateIncludes('notes')}">Notes</a></li>
                     <li><a ui-sref="home.register" ui-sref-active="active">Register</a></li>
                     <li><a ui-sref="home.login" ui-sref-active="active">Login</a></li>
                 </ul>
