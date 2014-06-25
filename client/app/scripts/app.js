@@ -40,8 +40,8 @@ angular
         url: 'login',
         templateUrl: 'views/login.html'
       })      
-      .state('home.notes.category', {
-        url: '/:category',
+      .state('home.category', {
+        url: 'notes/:category',
         templateUrl: 'views/category.html',
         controller: 'NotesCategoryController'
       })      

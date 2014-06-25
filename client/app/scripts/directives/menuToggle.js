@@ -24,7 +24,7 @@ angular.module('clientApp')
             console.groupEnd("nav");
             $elem.on('click', function() {
                 console.log("clicked");
-                $nav.animate({ height: 'toggle', opacity: 'toggle' }, 'slow');
+                $nav.animate({ height: 'toggle', opacity: 'toggle' }, 300);
             })
         }
     };
